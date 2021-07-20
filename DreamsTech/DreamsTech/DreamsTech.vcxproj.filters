@@ -16,6 +16,9 @@
     <Filter Include="Source Files\MessageBus">
       <UniqueIdentifier>{4ebec904-82eb-4666-9315-26f4f072da41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\MessageBus\Test Classes">
+      <UniqueIdentifier>{43198e19-fe1f-4bba-94ae-380dea6a5480}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Test.h">
@@ -23,14 +26,20 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Message.cpp">
       <Filter>Source Files\MessageBus</Filter>
     </ClCompile>
     <ClCompile Include="MessageBus.cpp">
       <Filter>Source Files\MessageBus</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\MessageBus</Filter>
+    </ClCompile>
+    <ClCompile Include="TestComponents.cpp">
+      <Filter>Source Files\MessageBus\Test Classes</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
