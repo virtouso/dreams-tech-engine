@@ -1,33 +1,26 @@
-#include "MessageBus.cpp"
-#include "TestComponents.cpp"
+#include <SFML/Graphics.hpp>
 
 
 
-//
-//
-//int main() {
-//
-//
-//
-//}
-
-
-
-
-
-//Test For message Bus and Components
  
 int main()
 {
-    MessageBus messageBus;
-    ComponentA compA(&messageBus);
-    ComponentB compB(&messageBus);
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
 
-    // This is supposed to act like a game loop.
-    for (int ctr = 0; ctr < 50; ctr++) {
-        compA.update();
-        compB.update();
-        messageBus.notify();
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear();
+        window.draw(shape);
+        window.display();
     }
 
     return 0;
